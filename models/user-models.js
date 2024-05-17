@@ -1,1 +1,3 @@
-app.use(express.json())
+const mongoose = require("mongoose")
+
+mongoose.connect("")
