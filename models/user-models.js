@@ -19,3 +19,4 @@ const userSchema = mongoose.Schema({
     picture: String
 
 })
+mongoose.model("user", userSchema)
