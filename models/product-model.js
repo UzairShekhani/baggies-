@@ -1,22 +1,16 @@
 const mongoose = require("mongoose")
 
-mongoose.connect("mongodb://127.0.0.1:27017/baggie")
-
-const userSchema = mongoose.Schema({
-    fullname: String,
-    email: String,
-    password: String,
-    cart: {
-        type: Array,
-        default: []
+const productSchema = mongoose.Schema({
+    image: String,
+    name: String,
+    price: Number,
+    discount: {
+        type:Number,
+        default:0
     },
-    Isadmin: Boolean,
-    orders: {
-        type: Array,
-        default: []
-    },
-    contact: Number,
-    picture: String
+    bgcolor: String ,
+    planelcolor: String ,
+    textcolor: String ,
 
 })
-mongoose.model("user", userSchema)
+module.exports = mongoose.model("products", productSchema)
